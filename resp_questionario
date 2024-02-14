@@ -1,0 +1,38 @@
+Respostas do Questionário:
+
+1. Explique brevemente o que é compilação cruzada (cross-compiling) e para que ela serve.
+    A compilação cruzada é uma técnica muito empregada em sistemas embarcados que consiste em compilar o código-fonte
+em um dispositivo distinto daquele que irá executá-lo. O uso dessa técnica se dá pois a maioria dos dispositivos que se 
+utilizam de um sistema embarcado apresentam um poder de processamento e memória limitados, assim, é vantajoso fazer o
+processo de compilação a parte em um dispositivo mais robusto e então repassar
+
+2. O que é um código de inicialização ou startup e qual sua finalidade?
+    O startup é um código que é executado antes da função principal, main(), e tem como finalidade preparar o ambiente para
+ela. Assim, a partir desse código de inicialização, serão realizadas rotinas e comandos assim que o dispositivo for inicializado
+que prepararão o ambiente, carregará o sistema operacional e permitirá uma execução adequada das aplicações principais.
+
+3. Sobre o utilitário make e o arquivo Makefile responda:
+(a) Explique com suas palavras o que é e para que serve o Makefile.
+    O arquivo makefile é um texto que instrui um processo de compilação e construção de determinado programa. Pode ser utilizado
+junto ao utilitário make para automatizar as compilações
+
+(b) Descreva brevemente o processo realizado pelo utilitário make para compilar um programa.
+    O utilitário make atua analisando as datas e horários de atualizações nos arquivos para então avaliar quais e quando precisam de 
+ser recompilados. Assim, a partir das regras determinadas no makefile, o processo de compilação será feito em todos os arquivos que 
+forem necessários de maneira automatizada
+
+(c) Qual é a sintaxe utilizada para criar um novo target?
+    A sintaxe é:
+
+    alvo: dependências
+        receita
+
+(d) Como são definidas as dependências de um target, para que elas são utilizadas?
+    As dependências são adicionadas ao lado do alvo (target) e são utilizadas para indicar quais arquivos são demandados para
+a construção do alvo e, caso sejam modificadas, o alvo vai ser recontruído
+
+(e) O que são as regras do Makefile, qual a diferença entre regras implícitas e explícitas?
+    As regras do makefile são os direcionamentos que instruem como deve se dar a compilação de determinado arquivo, essas regras
+podem ser divididas em dois grupos: explicitas e implicitas. As primeiras, constam no texto do makefile e foram adicionadas pelo
+programador para lidar com determinado arquivo em específico. Já as implícitas, são regras mais gerias aplicáveis a um certo tipo
+de arquivo, como arquivos C, e não precisam ser adicionadas e especificadas pelo programador
